@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+:root {
+  color-scheme: light;
+  --radius: 0.75rem;
+  --background: #f5f1ea;
+  --foreground: #1c1915;
+  --card: #fffdf9;
+  --card-foreground: #1c1915;
+  --popover: #fffdf9;
+  --popover-foreground: #1c1915;
+  --primary: #1f6b4a;
+  --primary-foreground: #f4fbf7;
+  --secondary: #ece5d9;
+  --secondary-foreground: #1c1915;
+  --muted: #efe9df;
+  --muted-foreground: #6b6359;
+  --accent: #e6f1ea;
+  --accent-foreground: #14462f;
+  --destructive: #b42318;
+  --border: #e2d9cb;
+  --input: #d8cebf;
+  --ring: #1f6b4a;
+  --success: #1f6b4a;
+  --warning: #9a6212;
+  --code: #1c1915;
+  --code-foreground: #f3eee6;
+  --code-border: #3a352f;
+  --shadow-color: 28 25 21;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: #141210;
+    --foreground: #ece6dc;
+    --card: #1d1a17;
+    --card-foreground: #ece6dc;
+    --popover: #1d1a17;
+    --popover-foreground: #ece6dc;
+    --primary: #3a9d6f;
+    --primary-foreground: #06140d;
+    --secondary: #2a2621;
+    --secondary-foreground: #ece6dc;
+    --muted: #24201c;
+    --muted-foreground: #a59c90;
+    --accent: #1b2d24;
+    --accent-foreground: #9fe0bf;
+    --destructive: #f07167;
+    --border: #322d27;
+    --input: #3b352e;
+    --ring: #3a9d6f;
+    --success: #6cc79d;
+    --warning: #e0ad4f;
+    --code: #0c0b09;
+    --code-foreground: #ece6dc;
+    --code-border: #2f2a25;
+    --shadow-color: 0 0 0;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-code: var(--code);
+  --color-code-foreground: var(--code-foreground);
+  --color-code-border: var(--code-border);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --shadow-soft: 0 1px 2px rgb(var(--shadow-color) / 0.04), 0 12px 32px -12px rgb(var(--shadow-color) / 0.12);
+  --animate-rise: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-fill: fill 5.6s linear;
+  --animate-travel: travel 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  --animate-blink: blink 1s ease infinite;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes travel {
+  0% { left: 16px; opacity: 0; }
+  14% { opacity: 1; }
+  70% { left: calc(100% - 270px); opacity: 1; }
+  100% { left: calc(100% - 250px); opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  h1, h2 { @apply font-serif font-normal tracking-tight; }
+  code { @apply font-mono text-[0.9em]; }
+  ::selection { @apply bg-primary/20; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
