@@ -1,0 +1,29 @@
+# dependencies
+node_modules
+
+# builds
+.next
+dist
+*.tsbuildinfo
+next-env.d.ts
+
+# local secrets and settings
+.env
+.env*.local
+!.env.example
+
+# test and scratch output
+.tmp
+coverage
+*.log
+
+# tools and editors
+.vercel
+.arena
+.nanocoder
+.DS_Store
+.idea
+.vscode
+
+# agent run logs
+decisions.tsv
