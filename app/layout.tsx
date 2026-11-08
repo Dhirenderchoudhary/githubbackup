@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: '/',
     siteName: 'gitbackup',
     type: 'website',
-    images: [{ url: '/og.png', width: 1280, height: 800, alt: 'The gitbackup home page' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'gitbackup backs up every GitHub repository to S3, R2, or Google Drive' }],
   },
   twitter: {
     card: 'summary_large_image',
