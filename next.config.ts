@@ -4,7 +4,7 @@ const { VERCEL_GIT_PROVIDER, VERCEL_GIT_REPO_OWNER, VERCEL_GIT_REPO_SLUG } = pro
 const repoUrl = process.env.GITBACKUP_REPO_URL
   || (VERCEL_GIT_PROVIDER === 'github' && VERCEL_GIT_REPO_OWNER && VERCEL_GIT_REPO_SLUG
     ? `https://github.com/${VERCEL_GIT_REPO_OWNER}/${VERCEL_GIT_REPO_SLUG}.git`
-    : 'https://github.com/Dhirenderchoudhary/gitbackup.git')
+    : 'https://github.com/Dhirenderchoudhary/githubbackup.git')
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,

@@ -1,21 +1,47 @@
 {
   "name": "gitbackup",
   "version": "1.0.0",
-  "description": "Back up the GitHub repositories you created to one destination you choose.",
-  "type": "module",
+  "description": "Back up the GitHub repositories you created, with every branch, tag, and note, to Amazon S3, Cloudflare R2, or Google Drive.",
+  "keywords": [
+    "github",
+    "backup",
+    "git",
+    "s3",
+    "cloudflare-r2",
+    "google-drive",
+    "cli",
+    "restore"
+  ],
+  "homepage": "https://githubbackup.dhirenderchoudhary.com",
+  "bugs": {
+    "url": "https://github.com/Dhirenderchoudhary/githubbackup/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhirenderchoudhary/githubbackup.git",
+    "directory": "packages/cli"
+  },
   "license": "MIT",
+  "author": "Dhirender Choudhary",
+  "type": "module",
   "engines": {
     "node": ">=22.18"
   },
   "bin": {
-    "gitbackup": "./src/cli.ts"
+    "gitbackup": "./bin/gitbackup.js"
   },
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "test": "node --test test/*.test.ts",
     "typecheck": "tsc -p tsconfig.json",
     "build": "tsc -p tsconfig.build.json",
-    "backup": "node src/cli.ts backup",
-    "start": "node src/cli.ts"
+    "backup": "node bin/gitbackup.js backup",
+    "start": "node bin/gitbackup.js",
+    "prepack": "npm run build"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1035.0",

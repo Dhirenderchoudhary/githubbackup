@@ -5,8 +5,8 @@ Thanks for helping. Bug reports, fixes, and new destinations are all welcome.
 ## Set up
 
 ```sh
-git clone https://github.com/Dhirenderchoudhary/gitbackup.git
-cd gitbackup
+git clone https://github.com/Dhirenderchoudhary/githubbackup.git
+cd githubbackup
 npm install
 npm test
 ```

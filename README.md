@@ -2,7 +2,7 @@
 
 Back up the GitHub repositories you created, with every branch, tag, and note, to Amazon S3, Cloudflare R2, or Google Drive. It runs on your own computer, from a small local app or the terminal, and restores to plain git repositories you can clone.
 
-[![CI](https://github.com/Dhirenderchoudhary/gitbackup/actions/workflows/ci.yml/badge.svg)](https://github.com/Dhirenderchoudhary/gitbackup/actions/workflows/ci.yml)
+[![CI](https://github.com/Dhirenderchoudhary/githubbackup/actions/workflows/ci.yml/badge.svg)](https://github.com/Dhirenderchoudhary/githubbackup/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1f6b4a.svg)](LICENSE)
 ![Node 22.18+](https://img.shields.io/badge/node-%E2%89%A522.18-1f6b4a.svg)
 
@@ -23,8 +23,8 @@ GitHub is where your code lives, not a backup of it. An account lockout, a delet
 You need git and Node.js 22.18 or newer.
 
 ```sh
-git clone https://github.com/Dhirenderchoudhary/gitbackup.git
-cd gitbackup
+git clone https://github.com/Dhirenderchoudhary/githubbackup.git
+cd githubbackup
 cp .env.example .env
 npm install
 npm run dev

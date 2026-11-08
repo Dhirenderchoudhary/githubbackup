@@ -209,13 +209,14 @@ function loadLocalEnv(): void {
   }
 }
 
-// npx runs this through a symlink in node_modules/.bin, so compare real paths.
-const invoked = process.argv[1] && import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href
-if (invoked) {
+export function run(): void {
   loadLocalEnv()
   main(process.argv.slice(2), process.env).then((code) => {
     process.exit(code)
   })
 }
+
+// The app spawns this file directly, while npx goes through bin/gitbackup.js.
+if (process.argv[1] && import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href) run()
 
 export type { BackupResult }

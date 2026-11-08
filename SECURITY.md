@@ -4,7 +4,7 @@ gitbackup handles GitHub tokens and storage keys, so security reports matter.
 
 ## Reporting
 
-Please do not open a public issue. Use [private vulnerability reporting](https://github.com/Dhirenderchoudhary/gitbackup/security/advisories/new) on GitHub. You will get a reply within a week.
+Please do not open a public issue. Use [private vulnerability reporting](https://github.com/Dhirenderchoudhary/githubbackup/security/advisories/new) on GitHub. You will get a reply within a week.
 
 ## How gitbackup handles secrets
 
