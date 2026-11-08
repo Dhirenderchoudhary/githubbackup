@@ -95,7 +95,7 @@ export default function HomePage() {
         <Commands />
       </Section>
 
-      <Section id="restore" title="Get it back" intro="Pick the same destination and an empty folder. Each repository comes back as a bare git directory you can clone.">
+      <Section id="restore" title="Get it back" intro="Run this inside your gitbackup folder, with the same .env. Each repository comes back as a bare git directory you can clone.">
         <CommandBlock command={'npx gitbackup restore --to s3 --out ./restored\ngit clone ./restored/my-repo.git my-repo'} />
         <p className="mt-3 text-sm text-muted-foreground">Use <code>--to r2</code> or <code>--to drive</code> for the other destinations.</p>
       </Section>

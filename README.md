@@ -51,7 +51,7 @@ A token typed on the Setup screen is stored in `~/.config/gitbackup/settings.jso
 
 ## Destinations
 
-One run writes to one destination. Check what the next run will use without backing anything up:
+One run writes to one destination. From the gitbackup folder, check what the next run will use without backing anything up:
 
 ```sh
 npx gitbackup check
@@ -99,7 +99,7 @@ Values in an optional `~/.config/gitbackup/config.json` are used when the matchi
 
 ## Restore
 
-Pick the same destination and an empty folder. Restoring needs no GitHub token.
+Run this inside your gitbackup folder, with the same `.env`, and point `--out` at an empty folder. Restoring needs no GitHub token.
 
 ```sh
 npx gitbackup restore --to s3 --out ./restored
