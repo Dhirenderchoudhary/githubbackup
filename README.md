@@ -37,7 +37,6 @@ Before `npm run dev`, open `.env`, set `GITBACKUP_TO` to `s3`, `r2`, or `drive`,
 3. **Backup.** The page shows which destination `.env` names. Press Start and watch each repository go from waiting to saved.
 4. **Schedule.** Run it daily, weekly, or monthly while the app stays open. On a Mac, a menu-bar icon shows the next run.
 
-![Choosing repositories](docs/repos.png)
 
 ![A finished backup](docs/backup.png)
 
